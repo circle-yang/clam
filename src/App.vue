@@ -1,6 +1,15 @@
+<!--
+ * @Description: 
+ * @Author: yanghuan
+ * @Date: 2022-09-23 18:42:13
+ * @LastEditTime: 2022-09-26 23:38:22
+ * @Last Modified by: yanghuan
+ * @packageDocumentation: 
+ * @module: 
+ * @category: 
+-->
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
