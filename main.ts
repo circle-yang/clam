@@ -2,14 +2,16 @@
  * @Description:
  * @Author: yanghuan
  * @Date: 2022-09-26 17:26:49
- * @LastEditTime: 2022-09-26 18:46:22
+ * @LastEditTime: 2022-09-27 21:59:58
  * @Last Modified by: yanghuan
  * @packageDocumentation:
  * @module:
  * @category:
  */
+
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const NODE_ENV = process.env.NODE_ENV;
 
 const createWindow = () => {
   // 创建浏览器窗口
@@ -17,13 +19,23 @@ const createWindow = () => {
     width: 800,
     height: 600,
     icon: path.join(__dirname, "public/clam.png"),
+    frames: false,
+    hasShadow: false,
+    webPreferences: {
+      enableRemoteModule: true,
+      nodeIntegration: true,
+    },
     // webPreferences: {
     //   preload: path.resolve(__dirname, "preload.ts"),
     // },
   });
 
   // 加载 index.html
-  mainWindow.loadFile("dist/index.html");
+  mainWindow.loadURL(
+    NODE_ENV === "development"
+      ? "http://localhost:5173"
+      : `file://${path.join(__dirname, "../dist/index.html")}`,
+  );
 
   // 打开开发工具
   mainWindow.webContents.openDevTools();
