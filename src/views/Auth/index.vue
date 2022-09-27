@@ -2,25 +2,23 @@
  * @Description: 
  * @Author: yanghuan
  * @Date: 2022-09-26 23:27:43
- * @LastEditTime: 2022-09-26 23:29:23
+ * @LastEditTime: 2022-09-27 18:56:04
  * @Last Modified by: yanghuan
  * @packageDocumentation: 
  * @module: 
  * @category: 
 -->
+/*
+ * @Description: 
+ * @Author: yanghuan
+ * @Date: 2022-09-26 23:27:43
+ * @LastEditTime: 2022-09-27 13:22:20
+ * @Last Modified by: yanghuan
+ * @packageDocumentation: 
+ * @module: 
+ * @category: 
+ */
 
 <template>
-  <div class="auth">
-    
-  </div>
+  ddd
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .auth {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
